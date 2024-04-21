@@ -1,1 +1,12 @@
-
+---
+ name: CPA MAP
+ description: The official CPA MAP for 2024
+ author:
+   - df44
+ resources:
+   - https://github.com/DF2016TIC/CPAMap/blob/6eb930d6462c5d4b3f2d97c278a73e76fcb5d6cc/Demo/demo.js
+   - https://github.com/DF2016TIC/CPAMap/blob/6eb930d6462c5d4b3f2d97c278a73e76fcb5d6cc/Demo/demo.css
+ normalize_css: no
+ load_type: d
+ 
+ 

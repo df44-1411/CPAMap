@@ -1,0 +1,78 @@
+/* CSS FOR THE CPA MAP
+
+MAP DESIGN AND HIGHCHARTS DEVELOPMENT: df44 (Discord: .df44) (c) 2024 All Rights Reserved
+
+ARMY COLORS GO HERE!!!
+FOLLOW THE FOLLOWING STRUCTURE
+ARMYSHORT COMES FROM THE JAVASCRIPT AND IT IS THE CLASS MADE THERE
+
+.ARMYSHORT{
+  fill: #hexcode;
+}
+
+*/
+
+
+.CPA {
+    fill: #87d1ff;
+}
+
+.CPAB {
+    fill: orange;
+}
+
+.CPAJ {
+    fill: #ca2244;
+}
+
+.WV {
+    fill: #000080;
+}
+
+.ACP {
+    fill: #008000;
+}
+
+.EGCP {
+    fill: #808080;
+}
+
+.SWAT {
+    fill: #00ff00;
+}
+
+.SE {
+    fill: #ffffff; 
+}
+
+.PIC{
+  fill: #333399;
+}
+
+.DP{
+     fill: #800000;
+}
+
+.TCP{
+     fill:#ffcc00;
+}
+
+.RPF{
+     fill:#000000;
+}
+
+.WH{
+  fill:#ff0000;
+}
+
+.HF{
+  fill:#0000ff;
+}
+
+.SP{
+  fill: red;
+}
+
+.WOK{
+  fill: black;
+}

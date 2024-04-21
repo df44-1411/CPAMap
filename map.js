@@ -1,10 +1,19 @@
 //CPA MAP - A PROJECT FOR CPA ORG
 
 //MAP DESIGN AND HIGHCHARTS DEVELOPMENT : df44 (Discord:.df44) (c) 2024 All Rights Reserved
+function updateChartDimensions() {
+    var chartWidth = window.innerWidth; // Get the width of the browser window
+    var chartHeight = window.innerHeight; // Get the height of the browser window
 
+    // Update chart dimensions
+    Highcharts.charts.forEach(function(chart) {
+        if (chart) {
+            chart.setSize(chartWidth, chartHeight);
+        }
+    });
+}
 Highcharts.mapChart('container', {
     chart: {
-      height: (3 / 4 * 100) + '%',
       backgroundColor: '#003d62',
       type: 'line',
       map: 'cpa',
@@ -3117,7 +3126,10 @@ Highcharts.mapChart('container', {
     if (point.controller === "Warlords of Kosmos"){
     	point.graphic.addClass('WOK');
     }
-    
+    //INSERT NEW ARMIES AFTER THIS
+      
   });
-
+     //DONOT TYPE HERE
 });
+// Update chart dimensions on window resize
+window.addEventListener('resize', updateChartDimensions);

@@ -3069,8 +3069,7 @@ Highcharts.mapChart('container', {
 
     }]
   }, 
-   // Update chart dimensions on window resize
-    window.addEventListener('resize', updateChartDimensions);
+ 
   //IMPORTANT IMPORTANT IMPORTANT
   //ARMY CODES GO HERE THEN INCLUDE THEM ON THE CSS PLEASE!
   function(chart) {

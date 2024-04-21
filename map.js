@@ -2,18 +2,7 @@
 
 //MAP DESIGN AND HIGHCHARTS DEVELOPMENT : df44 (Discord:.df44) (c) 2024 All Rights Reserved
 
-//JUST A FIXING FUNCTION HERE NOTHING ELSE TO SEE
-function updateChartDimensions() {
-    var chartWidth = window.innerWidth; // Get the width of the browser window
-    var chartHeight = window.innerHeight; // Get the height of the browser window
 
-    // Update chart dimensions
-    Highcharts.charts.forEach(function(chart) {
-        if (chart) {
-            chart.setSize(chartWidth, chartHeight);
-        }
-    });
-}
 //MAP GOES AFTER THIS
 Highcharts.mapChart('container', {
     chart: {

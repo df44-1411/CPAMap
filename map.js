@@ -1,6 +1,8 @@
 //CPA MAP - A PROJECT FOR CPA ORG
 
 //MAP DESIGN AND HIGHCHARTS DEVELOPMENT : df44 (Discord:.df44) (c) 2024 All Rights Reserved
+
+//JUST A FIXING FUNCTION HERE NOTHING ELSE TO SEE
 function updateChartDimensions() {
     var chartWidth = window.innerWidth; // Get the width of the browser window
     var chartHeight = window.innerHeight; // Get the height of the browser window
@@ -12,6 +14,7 @@ function updateChartDimensions() {
         }
     });
 }
+//MAP GOES AFTER THIS
 Highcharts.mapChart('container', {
     chart: {
       backgroundColor: '#003d62',
@@ -3066,7 +3069,8 @@ Highcharts.mapChart('container', {
 
     }]
   }, 
-  
+   // Update chart dimensions on window resize
+    window.addEventListener('resize', updateChartDimensions);
   //IMPORTANT IMPORTANT IMPORTANT
   //ARMY CODES GO HERE THEN INCLUDE THEM ON THE CSS PLEASE!
   function(chart) {
@@ -3130,7 +3134,5 @@ Highcharts.mapChart('container', {
       
   });
      //DONOT TYPE HERE
-      // Update chart dimensions on window resize
-window.addEventListener('resize', updateChartDimensions);
 });
 

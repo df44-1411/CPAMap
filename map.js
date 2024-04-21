@@ -3130,6 +3130,7 @@ Highcharts.mapChart('container', {
       
   });
      //DONOT TYPE HERE
-});
-// Update chart dimensions on window resize
+      // Update chart dimensions on window resize
 window.addEventListener('resize', updateChartDimensions);
+});
+

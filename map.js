@@ -5,6 +5,8 @@
 //MAP STARTS HERE
 Highcharts.mapChart('container', {
     chart: {
+      height: 'auto',
+      weight: 'auto',
       backgroundColor: '#003d62',
       type: 'line',
       map: 'cpa',

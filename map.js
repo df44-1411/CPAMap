@@ -2,6 +2,19 @@
 
 //MAP DESIGN AND HIGHCHARTS DEVELOPMENT : df44 (Discord:.df44) (c) 2024 All Rights Reserved
 
+// Function to update chart dimensions
+function updateChartDimensions() {
+    var chartWidth = window.innerWidth; // Get the width of the browser window
+    var chartHeight = window.innerHeight; // Get the height of the browser window
+
+    // Update chart dimensions
+    Highcharts.charts.forEach(function(chart) {
+        if (chart) {
+            chart.setSize(chartWidth, chartHeight);
+        }
+    });
+}
+//MAP STARTS HERE
 Highcharts.mapChart('container', {
     chart: {
       height: (3 / 4 * 100) + '%',
@@ -3121,3 +3134,6 @@ Highcharts.mapChart('container', {
   });
 
 });
+
+// Update chart dimensions on window resize
+window.addEventListener('resize', updateChartDimensions);

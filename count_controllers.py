@@ -2,7 +2,7 @@ import re
 import json
 
 # Read map data from JavaScript file
-with open('map_data.js', 'r') as file:
+with open('map.js', 'r') as file:
     js_content = file.read()
 
 # Extract mapData from JavaScript content using regex
@@ -20,7 +20,7 @@ if map_data_match:
             controller_counts[controller] = controller_counts.get(controller, 0) + 1
 
     # Read colors from CSS file
-    with open('styles.css', 'r') as css_file:
+    with open('map.css', 'r') as css_file:
         css_content = css_file.read()
 
     # Extract color for each controller

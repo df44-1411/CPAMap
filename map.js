@@ -2,10 +2,9 @@
 
 //MAP DESIGN AND HIGHCHARTS DEVELOPMENT : df44 (Discord:.df44) (c) 2024 All Rights Reserved
 
-
-//MAP GOES AFTER THIS
 Highcharts.mapChart('container', {
     chart: {
+      height: (3 / 4 * 100) + '%',
       backgroundColor: '#003d62',
       type: 'line',
       map: 'cpa',
@@ -3058,7 +3057,7 @@ Highcharts.mapChart('container', {
 
     }]
   }, 
- 
+  
   //IMPORTANT IMPORTANT IMPORTANT
   //ARMY CODES GO HERE THEN INCLUDE THEM ON THE CSS PLEASE!
   function(chart) {
@@ -3118,9 +3117,7 @@ Highcharts.mapChart('container', {
     if (point.controller === "Warlords of Kosmos"){
     	point.graphic.addClass('WOK');
     }
-    //INSERT NEW ARMIES AFTER THIS
-      
+    
   });
-     //DONOT TYPE HERE
-});
 
+});

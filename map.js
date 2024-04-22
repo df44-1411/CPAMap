@@ -5,7 +5,7 @@
 //MAP STARTS HERE
 Highcharts.mapChart('container', {
     chart: {
-      height: 'auto',
+      height: (3 / 4 * 100) + '%',
       weight: 'auto',
       backgroundColor: '#003d62',
       type: 'line',

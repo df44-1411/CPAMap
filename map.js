@@ -17,7 +17,6 @@ function updateChartDimensions() {
 //MAP STARTS HERE
 Highcharts.mapChart('container', {
     chart: {
-      height: (3 / 4 * 100) + '%',
       backgroundColor: '#003d62',
       type: 'line',
       map: 'cpa',
@@ -56,7 +55,7 @@ Highcharts.mapChart('container', {
           // Check the "type" field of the point
           if (this.point.type === "CAPITAL") {
             // Return the data label with yellow color
-            return '<span style="color: red">' + this.point.name + '</span>';
+            return '<span style="color: yellow">' + this.point.name + '</span>';
           } else {
             // Return the data label with default color
             return this.point.name;

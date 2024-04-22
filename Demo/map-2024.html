@@ -1,0 +1,128 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .menu-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10001; /* Ensure the menu is above other elements */
+        background-color: #377499; /* Set the background color of the menu */
+        color: #ffffff; /* Set the text color of the menu */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a shadow for a subtle effect */
+    }
+    .menu {
+        max-width: 1200px; /* Set the maximum width of the menu */
+        margin: 0 auto; /* Center the menu horizontally */
+        padding: 10px 20px; /* Add padding for better spacing */
+    }
+    .menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center; /* Center the menu items */
+    }
+    .menu ul li {
+        display: inline-block;
+        margin-right: 20px; /* Adjust the margin between menu items */
+    }
+    .menu ul li:last-child {
+        margin-right: 0; /* Remove margin from the last menu item */
+    }
+    .menu ul li a {
+        text-decoration: none;
+        color: #ffffff; /* Set the color of the menu items */
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.3s ease; /* Add transition for smooth color change */
+    }
+    .menu ul li a:hover {
+        color: #000000; /* Change color on hover */
+    }
+    .blank-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('https://cparmies.org/wp-content/uploads/2024/01/bg-2.png'); /* Set the background image */
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 9998; /* Place it below the iframe but above the original website */
+    }
+    .iframe-container {
+        position: fixed;
+        top: calc(50% + 20px); /* Center the iframe vertically with a margin */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%; /* Adjust the width of the iframe as needed */
+        height: calc(90% - 40px); /* Adjust the height of the iframe with space for margin */
+        z-index: 9999;
+        overflow: hidden;
+    }
+    .iframe-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .floating-embed {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.7); /* Adjust the transparency as needed */
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 10000;
+    }
+    .minimize-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+    }
+    .hidden {
+        display: none;
+    }
+</style>
+
+<script>
+    function toggleFloatingEmbed() {
+        var floatingEmbed = document.querySelector('.floating-embed');
+        floatingEmbed.classList.toggle('hidden');
+    }
+</script>
+
+<div class="menu-container">
+    <div class="menu">
+        <!-- Add your menu items here -->
+        <ul>
+            <li><a href="https://www.cparmies.org/">Home</a></li>
+            <li><a href="https://cparmies.org/about/">About</a></li>
+            <li><a href="https://cparmies.org/category/news/">News</a></li>
+            <li><a href="https://cparmies.org/category/editorial/">Opinion</a></li>
+            <li><a href="https://cparmies.org/category/top-ten-armies/">Rankings</a></li>
+            <li><a href="https://cparmies.org/league/">League</a></li>
+            <li><a href="https://cparmies.org/map/map-rules/">Map Rules</a></li>
+            <li><a href="https://cparmies.org/legends/">Legends</a></li>
+            <li><a href="https://discord.gg/eSRETx8b3z">Discord</a></li>
+            <li><a href="https://cparmies.org/privacy/">Privacy Policy</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="blank-container"></div>
+
+<div class="iframe-container">
+    <iframe src="https://df44-1411.github.io/CPAMap/" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+</div>
+
+<div class="floating-embed">
+    <!-- Content for the floating embed -->
+    <h2>Army Codes</h2>
+    <p>TBA.</p>
+    <!-- You can add content from another WordPress page here -->
+    <span class="minimize-btn" onclick="toggleFloatingEmbed()">Minimize</span>
+</div>

@@ -35,7 +35,7 @@ for term, color in search_terms.items():
     count = content.lower().count(term.lower()) - 1
 
     # If the term appears more than once
-    if count > 1:
+    if count >= 1:
         # Add a line to the HTML content
         html_content += f'<p style="color: {color}; font-weight: bold;">{term} ({count})</p>'
 

@@ -1,4 +1,4 @@
-name: Run Python script
+name: Amry Code Updates
 
 on:
   schedule:

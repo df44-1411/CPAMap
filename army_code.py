@@ -1,44 +1,45 @@
-import json
-import re
+# Define the sentences to search for and their corresponding colors
+search_terms = {
+    "Club Penguin Armies": "#87d1ff",
+    "CPA Battleground": "#dd2100",
+    "Club Penguin Army Judges": "#ca2244",
+    "Water Vikings": "#000080",
+    "Army of Club Penguin": "#008000",
+    "Elite Guardians of Club Penguin": "#808080",
+    "Special Weapons and Tactics": "#00ff00",
+    "Silver Empire": "white",
+    "People's Imperial Confederation": "#333399",
+    "Dark Pirates": "#800000",
+    "Templars": "#ffcc00",
+    "Rebel Penguin Federation": "#000000",
+    "Winged Hussars": "#ff0000",
+    "Help Force": "#0000ff",
+    "Smart Penguins": "red",
+    "Warlords of Kosmos": "black",
+    "Freeland" : "grey"
+}
 
-# Define a function to extract map data from the JavaScript file
-def extract_map_data(js_file_path):
-    # Read the JavaScript file
-    with open(js_file_path, 'r') as file:
-        js_content = file.read()
+# Open the file in read mode
+with open('map.js', 'r') as file:
+    # Read the content of the file
+    content = file.read()
 
-    # Find the map data in the JavaScript content
-    map_data_match = re.search(r'mapData: (\[.*?\])', js_content, re.DOTALL)
+# Initialize the HTML content
+html_content = "<html><body>"
 
-    # If the map data is found
-    if map_data_match:
-        # Extract the map data as a JSON string
-        map_data_json = map_data_match.group(1)
+# Iterate over the search terms
+for term, color in search_terms.items():
+    # Count the occurrences of the term in the content
+    count = content.lower().count(term.lower())
 
-        # Parse the JSON string into a Python list
-        map_data = json.loads(map_data_json)
+    # If the term appears more than once
+    if count > 1:
+        # Add a line to the HTML content
+        html_content += f'<p style="color: {color}; font-weight: bold;">{term} ({count})</p>'
 
-        # Return the map data
-        return map_data
+# Close the HTML tags
+html_content += "</body></html>"
 
-    # If the map data is not found, return an empty list
-    return []
-
-# Call the function to extract map data from "map.js"
-map_data = extract_map_data("map.js")
-
-# Initialize a counter
-freeland_count = 0
-
-# Iterate over the map data
-for data_point in map_data:
-    # If the controller is 'Freeland', increment the counter
-    if data_point["controller"].lower() == "freeland":
-        freeland_count += 1
-
-# Prepare the HTML content
-html_content = f"<html><body><p>The controller 'Freeland' appears {freeland_count} times in the map data.</p></body></html>"
-
-# Write the HTML content to "output.html"
-with open("output.html", 'w') as file:
+# Write the HTML content to "army_code.html"
+with open("army_code.html", 'w') as file:
     file.write(html_content)

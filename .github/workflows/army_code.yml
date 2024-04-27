@@ -1,8 +1,10 @@
-name: Amry Code Updates
+name: army codes updater
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'  # This will run the workflow every 5 minutes
+  push:
+    branches: [ main ]
+    paths:
+      - 'map.js'  # This workflow will only run when map.js is updated
 
 jobs:
   build:
@@ -21,3 +23,10 @@ jobs:
         # If there are any dependencies, install them here
     - name: Run Python script
       run: python army_code.py
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'df44-1411'
+        git config --global user.email 'df2016tic@gmail.com'
+        git add .
+        git commit -m "Update army_code.html"
+        git push

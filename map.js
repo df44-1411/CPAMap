@@ -3080,6 +3080,9 @@ Highcharts.mapChart('container', {
     if (point.controller === "Club Penguin Army Judges"){
     	point.graphic.addClass('CPAJ');
     }
+    if (point.controller === "Freeland"){
+    	point.graphic.addClass('Free');
+    }
     if (point.controller === "Water Vikings"){
     	point.graphic.addClass('WV');
     }

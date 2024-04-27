@@ -2,7 +2,7 @@
 
 //MAP DESIGN AND HIGHCHARTS DEVELOPMENT : df44 (Discord:.df44) (c) 2024 All Rights Reserved
 
-//MAP STARTS HERE
+//MAP STARTS HERE!
 Highcharts.mapChart('container', {
     chart: {
       height: (3 / 4 * 100) + '%',

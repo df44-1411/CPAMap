@@ -1,3 +1,5 @@
+#PYTHON SCRIPT TO AUTO UPDATE THE ARMY CODE FOR DISPLAYING HOW MANY SERVERS ONE ARMY HAS.
+
 # Define the sentences to search for and their corresponding colors
 search_terms = {
     "Club Penguin Armies": "#87d1ff",
@@ -30,7 +32,7 @@ html_content = "<html><body>"
 # Iterate over the search terms
 for term, color in search_terms.items():
     # Count the occurrences of the term in the content
-    count = content.lower().count(term.lower())
+    count = content.lower().count(term.lower()) - 1
 
     # If the term appears more than once
     if count > 1:

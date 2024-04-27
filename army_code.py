@@ -1,5 +1,3 @@
-#PYTHON SCRIPT TO AUTO UPDATE THE ARMY CODE FOR DISPLAYING HOW MANY SERVERS ONE ARMY HAS.
-
 # Define the sentences to search for and their corresponding colors
 search_terms = {
     "Club Penguin Armies": "#87d1ff",
@@ -27,7 +25,7 @@ with open('map.js', 'r') as file:
     content = file.read()
 
 # Initialize the HTML content
-html_content = "<html><body>"
+html_content = "<html><body style='font-family: sans-serif;'>"
 
 # Iterate over the search terms
 for term, color in search_terms.items():

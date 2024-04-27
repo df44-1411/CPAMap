@@ -3081,7 +3081,7 @@ Highcharts.mapChart('container', {
     	point.graphic.addClass('CPAJ');
     }
     if (point.controller === "Freeland"){
-    	point.graphic.addClass('Free');
+    	point.graphic.addClass('Freeland');
     }
     if (point.controller === "Water Vikings"){
     	point.graphic.addClass('WV');

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Data Editor</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+        margin: 10px;
+        padding: 0;
+        overflow: hidden;
+        background-color: #377499;
+        font-family: sans-serif;
+        color: beige;
+    }
+    </style>
+    <h1>CPA MAP EDITOR</h1>
+    <p>Once you fetch data you will have the following fields - Type - Continent - Controller - Server Name</p>
+    <input type="text" id="idInput" placeholder="Enter ID">
+    <button onclick="fetchData()">Fetch Data</button>
+    <div id="dataContainer"></div>
+    <script src="map.js"></script>
+    <script src="editor.js"></script>
+</body>
+</html>

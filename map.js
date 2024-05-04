@@ -3095,7 +3095,7 @@ Highcharts.mapChart('container', {
     	point.graphic.addClass('ACP');
     }
     if (point.controller === "Elite Guardians of Club Penguin"){
-    	point.graphic.addClass('WV');
+    	point.graphic.addClass('EGCP');
     }
     if (point.controller === "Special Weapons and Tactics"){
     	point.graphic.addClass('SWAT');

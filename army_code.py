@@ -5,7 +5,7 @@ search_terms = {
     "Club Penguin Army Judges": "#ca2244",
     "Water Vikings": "#000080",
     "Army of Club Penguin": "#008000",
-    "Elite Guardians of Club Penguin": "#808080",
+    "Elite Guardians of Club Penguin": "grey",
     "Special Weapons and Tactics": "#00ff00",
     "Silver Empire": "white",
     "People's Imperial Confederation": "#333399",
